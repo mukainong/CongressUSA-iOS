@@ -1,0 +1,1274 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		10EB23E9ECC4B33E16933BB1EA560B6A /* Timeline.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3558A516FBE9692D8741F0B666C8824 /* Timeline.swift */; };
+		1B9EDEDC964E6B08F78920B4F4B9DB84 /* Alamofire-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = C0BAC37F45CFE0D6BAB72B3037149060 /* Alamofire-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		2CB1F49984E68E4EC1913D88AD41D51A /* SlideMenuControllerSwift.h in Headers */ = {isa = PBXBuildFile; fileRef = 043B5ECE7523FF000048D4B3D0EBD0E8 /* SlideMenuControllerSwift.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		3590C54C73D3426112CE3D0E7FCC8F5F /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7EC994CDC2D681BA26389F78A7E4B325 /* UIKit.framework */; };
+		3626B94094672CB1C9DEA32B9F9502E1 /* TaskDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 814D034FD8271180C80E5E564AE070BE /* TaskDelegate.swift */; };
+		39DE2E7307DC229456BFDCEBF92FA276 /* SwiftSpinner-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 38D97EF3F3B9A5ECA7CA19F1BF5B3E0F /* SwiftSpinner-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		4C9DBA7D7F9613475CFCCD1ACED9A73A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 616BEB51ECCAD129BDBCB7A956B56CC6 /* Foundation.framework */; };
+		5387216E723A3C68E851CA15573CDD71 /* Request.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A279BB2D27188F8E5ED3F5183E0063B /* Request.swift */; };
+		5441DFBC3828570D09C9FD1C3F5EE70D /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 616BEB51ECCAD129BDBCB7A956B56CC6 /* Foundation.framework */; };
+		569C18AE26EAD46358703CAA2A7492D4 /* SwiftSpinner.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA68F739BD167741AEA821B17DE829C8 /* SwiftSpinner.swift */; };
+		61200D01A1855D7920CEF835C8BE00B0 /* DispatchQueue+Alamofire.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7C9C91DAAC37806FA038A6E7150D5C7 /* DispatchQueue+Alamofire.swift */; };
+		62F65AD8DC4F0F9610F4B8B4738EC094 /* ServerTrustPolicy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50534F90FA3275EEE4298DE755248513 /* ServerTrustPolicy.swift */; };
+		630A71D5FCED9760C6332EE72192FA0D /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 616BEB51ECCAD129BDBCB7A956B56CC6 /* Foundation.framework */; };
+		7AEB6C5FB370A5FFC042451B52812330 /* Pods-SlideMenuControllerSwift-iOS-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 27372A2ADC9DFE55726F305DCD6BD4DF /* Pods-SlideMenuControllerSwift-iOS-dummy.m */; };
+		7B5FE28C7EA4122B0598738E54DBEBD8 /* SessionDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A3C47D285AE2A41A2C8A169B883C953 /* SessionDelegate.swift */; };
+		7D8CC01E8C9EFFF9F4D65406CDE0AB66 /* Result.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67A3A323E74678C32C886471E9B361E4 /* Result.swift */; };
+		7F45FB639488DB2A6BCA07CD5BBBD041 /* SwiftyJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9F8D548F99EF4DED6CFFF7A65108D45 /* SwiftyJSON.swift */; };
+		861543D9247FE5631575B64ECCEED8D5 /* SlideMenuControllerSwift-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 9C55EAAB06863B93527C66A88236557E /* SlideMenuControllerSwift-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		86370FD6C32CAA1F9715044489624742 /* Pods-SlideMenuControllerSwift-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 89E39B89017DBE934B2517C19DADA26A /* Pods-SlideMenuControllerSwift-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		9ED2BB2981896E0A39EFA365503F58CE /* AFError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 700E6CD18454648C4B2849F4FD971440 /* AFError.swift */; };
+		A046D782486C49A139B885F5EEB2C4AA /* SwiftyJSON-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 55BBA3FEDDA78056DB473C3CFAA7258B /* SwiftyJSON-dummy.m */; };
+		A04BFC558D69E7DBB68023C80A9CFE4E /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 616BEB51ECCAD129BDBCB7A956B56CC6 /* Foundation.framework */; };
+		A20103C5429FF5B153DE677E9B906ABE /* SwiftSpinner.h in Headers */ = {isa = PBXBuildFile; fileRef = 095B59565B2B33C5378672677225CEFC /* SwiftSpinner.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		A2A6F71B727312BD45CC7A4AAD7B0AB7 /* NetworkReachabilityManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44E4BF0F5DB7A2CF6CD2FCE06AEC5AA4 /* NetworkReachabilityManager.swift */; };
+		A7F8B919346BA5438AA0EADD3328C1A6 /* SlideMenuControllerSwift-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 636B06E649CDE3097C8664199EA1B840 /* SlideMenuControllerSwift-dummy.m */; };
+		A9EEEA7477981DEEBC72432DE9990A4B /* Alamofire-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 2864BF19C2AAEC797FD968CC13A8E04B /* Alamofire-dummy.m */; };
+		AB4ACE216A4A064B92761F65088F86CC /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 616BEB51ECCAD129BDBCB7A956B56CC6 /* Foundation.framework */; };
+		AE1EF48399533730D0066E04B22CA2D6 /* SessionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C607689506953A90FA96077D8D33B92E /* SessionManager.swift */; };
+		B65FCF589DA398C3EFE0128064E510EC /* MultipartFormData.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9384A10F44C7FF7FC6C3839605D5F0E /* MultipartFormData.swift */; };
+		B8DDE1A357AAF5F370653F03F94AA1E6 /* SlideMenuController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4FD8A20B7D19E452171576CB1A93000 /* SlideMenuController.swift */; };
+		BBEFE2F9CEB73DC7BD97FFA66A0D9D4F /* Validation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EBB5AAFC7A3BB8EE781163883821446 /* Validation.swift */; };
+		BE5C67A07E289FE1F9BE27335B159997 /* ParameterEncoding.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8E131CFC4C23A8CC0230CEB532F76C3 /* ParameterEncoding.swift */; };
+		C1B1DDA56503B11C8589AC41B9AC8854 /* Pods-SlideMenuControllerSwift-iOS-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = DA52C076E2FA4A8D708E7F2B2496D603 /* Pods-SlideMenuControllerSwift-iOS-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		C58854F8A8E0B8FE1BD318FF9C86C37F /* Info.plist in Sources */ = {isa = PBXBuildFile; fileRef = 7AF2047E91BCE26664F8C022DEE201DD /* Info.plist */; };
+		C7E2C1FC6EE41401217509EECA309392 /* SwiftyJSON-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = CB1FD70A8D925F61C72BF94570C95D40 /* SwiftyJSON-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		CB6D60925223897FFA2662667DF83E8A /* Response.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5548E146A0DC5995217CDE06DF8D57AE /* Response.swift */; };
+		E9C98A6016DEDD09ACD2873330D0E3EA /* Pods-SlideMenuControllerSwift-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 0F57C5746A3FE8510827DE4129FE2AE6 /* Pods-SlideMenuControllerSwift-dummy.m */; };
+		EFD264FC408EBF3BA2528E70B08DDD94 /* Notifications.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5E6298CADB37157BFA8B50AC269431E /* Notifications.swift */; };
+		F4F271A2EAA45948297435861578FD48 /* SwiftSpinner-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = F4A37A75568B573BE1DF079BC6806641 /* SwiftSpinner-dummy.m */; };
+		F6BECD98B97CBFEBE2C96F0E9E72A6C0 /* ResponseSerialization.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDDA391F16FD56E473CB5C0086B64357 /* ResponseSerialization.swift */; };
+		F8B3D3092ED0417E8CDF32033F6122F5 /* Alamofire.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12D93CF4C39202304BB16BB25CE6EBFF /* Alamofire.swift */; };
+		FA97A87CE2DCB43D206E0707524BE807 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 616BEB51ECCAD129BDBCB7A956B56CC6 /* Foundation.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		6E3A15E080D2020E2573BA432E389838 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 51CFFFE2397B8E2B966300F32FE3D514;
+			remoteInfo = SwiftyJSON;
+		};
+		ACF16007E1296EC9E958332D0365153D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 407100AEF974D243ADB099F3C14E24DB;
+			remoteInfo = SwiftSpinner;
+		};
+		DB84FFA6ED6258654270A317165FF6AE /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = E0D9B60E0CC5D2BAAE8BA2E4192F1602;
+			remoteInfo = SlideMenuControllerSwift;
+		};
+		F9CB2C236A997170CF35F03062464C23 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 88E9EC28B8B46C3631E6B242B50F4442;
+			remoteInfo = Alamofire;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		043B5ECE7523FF000048D4B3D0EBD0E8 /* SlideMenuControllerSwift.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SlideMenuControllerSwift.h; path = Source/SlideMenuControllerSwift.h; sourceTree = "<group>"; };
+		07D0E53B09680973AD430948708E9A9D /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		095B59565B2B33C5378672677225CEFC /* SwiftSpinner.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SwiftSpinner.h; path = SwiftSpinner/SwiftSpinner.h; sourceTree = "<group>"; };
+		0F57C5746A3FE8510827DE4129FE2AE6 /* Pods-SlideMenuControllerSwift-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-SlideMenuControllerSwift-dummy.m"; sourceTree = "<group>"; };
+		12D93CF4C39202304BB16BB25CE6EBFF /* Alamofire.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Alamofire.swift; path = Source/Alamofire.swift; sourceTree = "<group>"; };
+		16F5B475E0BFA6142284B34B5A51E69A /* SwiftyJSON.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = SwiftyJSON.modulemap; sourceTree = "<group>"; };
+		18F650E898ADF5DC6C47D0C805FB5FE1 /* SwiftSpinner.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = SwiftSpinner.xcconfig; sourceTree = "<group>"; };
+		1EBB5AAFC7A3BB8EE781163883821446 /* Validation.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Validation.swift; path = Source/Validation.swift; sourceTree = "<group>"; };
+		27372A2ADC9DFE55726F305DCD6BD4DF /* Pods-SlideMenuControllerSwift-iOS-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-SlideMenuControllerSwift-iOS-dummy.m"; sourceTree = "<group>"; };
+		2864BF19C2AAEC797FD968CC13A8E04B /* Alamofire-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Alamofire-dummy.m"; sourceTree = "<group>"; };
+		2A24092211822E9432E43BC8A3D181AA /* Pods_SlideMenuControllerSwift_iOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_SlideMenuControllerSwift_iOS.framework; path = "Pods-SlideMenuControllerSwift-iOS.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		32694AE67005CF4075A19E0A35CE27A0 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		35FC371B54FB0CE7F6811E75C8F08788 /* Pods-SlideMenuControllerSwift-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-SlideMenuControllerSwift-acknowledgements.plist"; sourceTree = "<group>"; };
+		38D97EF3F3B9A5ECA7CA19F1BF5B3E0F /* SwiftSpinner-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SwiftSpinner-umbrella.h"; sourceTree = "<group>"; };
+		38FFC4373CEF04C13C90744E6288B567 /* SlideMenuControllerSwift.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = SlideMenuControllerSwift.framework; path = SlideMenuControllerSwift.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		3DB0F70C6F906D2CE7C4DBCE4156E1E8 /* SwiftSpinner.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = SwiftSpinner.framework; path = SwiftSpinner.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		4401FC8CB00A8E8D4C1D5681E1144F6D /* Pods-SlideMenuControllerSwift-iOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-SlideMenuControllerSwift-iOS.release.xcconfig"; sourceTree = "<group>"; };
+		44E4BF0F5DB7A2CF6CD2FCE06AEC5AA4 /* NetworkReachabilityManager.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = NetworkReachabilityManager.swift; path = Source/NetworkReachabilityManager.swift; sourceTree = "<group>"; };
+		4DD001C3D8A91EFD3FE3224E67A18D50 /* Alamofire.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = Alamofire.modulemap; sourceTree = "<group>"; };
+		4EA955881F48FA581E3836C8F9671C5E /* SlideMenuControllerSwift.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = SlideMenuControllerSwift.modulemap; sourceTree = "<group>"; };
+		50534F90FA3275EEE4298DE755248513 /* ServerTrustPolicy.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ServerTrustPolicy.swift; path = Source/ServerTrustPolicy.swift; sourceTree = "<group>"; };
+		52FABCA0482063386B77602596C67257 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		53824DD5F95FE8D5B77823CFB5015A9A /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5548E146A0DC5995217CDE06DF8D57AE /* Response.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Response.swift; path = Source/Response.swift; sourceTree = "<group>"; };
+		55BBA3FEDDA78056DB473C3CFAA7258B /* SwiftyJSON-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "SwiftyJSON-dummy.m"; sourceTree = "<group>"; };
+		616BEB51ECCAD129BDBCB7A956B56CC6 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		636B06E649CDE3097C8664199EA1B840 /* SlideMenuControllerSwift-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "SlideMenuControllerSwift-dummy.m"; sourceTree = "<group>"; };
+		64ED7F68D5474C3A95483E48D3247605 /* SwiftyJSON-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SwiftyJSON-prefix.pch"; sourceTree = "<group>"; };
+		67A3A323E74678C32C886471E9B361E4 /* Result.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Result.swift; path = Source/Result.swift; sourceTree = "<group>"; };
+		6B1D4A0AD048641B58A76324FBF802B2 /* SwiftyJSON.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = SwiftyJSON.xcconfig; sourceTree = "<group>"; };
+		6FA4162F8F9D064D60C78FC9645C9F14 /* Pods-SlideMenuControllerSwift.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = "Pods-SlideMenuControllerSwift.modulemap"; sourceTree = "<group>"; };
+		700E6CD18454648C4B2849F4FD971440 /* AFError.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = AFError.swift; path = Source/AFError.swift; sourceTree = "<group>"; };
+		772297CCAB13FB6CFEE6BC23B2A0B22E /* Pods-SlideMenuControllerSwift-iOS-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-SlideMenuControllerSwift-iOS-acknowledgements.plist"; sourceTree = "<group>"; };
+		78D5C44EB9FE5A765B01A61E209339F0 /* Pods-SlideMenuControllerSwift-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-SlideMenuControllerSwift-resources.sh"; sourceTree = "<group>"; };
+		7A279BB2D27188F8E5ED3F5183E0063B /* Request.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Request.swift; path = Source/Request.swift; sourceTree = "<group>"; };
+		7AF2047E91BCE26664F8C022DEE201DD /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; name = Info.plist; path = Source/Info.plist; sourceTree = "<group>"; };
+		7EC994CDC2D681BA26389F78A7E4B325 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.0.sdk/System/Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
+		814D034FD8271180C80E5E564AE070BE /* TaskDelegate.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = TaskDelegate.swift; path = Source/TaskDelegate.swift; sourceTree = "<group>"; };
+		82E610669823BB0C201BE4AE1FD2BC93 /* Pods-SlideMenuControllerSwift-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-SlideMenuControllerSwift-frameworks.sh"; sourceTree = "<group>"; };
+		85F37C940CE6143D331F9FFC3D1BC0C7 /* SlideMenuControllerSwift.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = SlideMenuControllerSwift.xcconfig; sourceTree = "<group>"; };
+		89E39B89017DBE934B2517C19DADA26A /* Pods-SlideMenuControllerSwift-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-SlideMenuControllerSwift-umbrella.h"; sourceTree = "<group>"; };
+		8A3C47D285AE2A41A2C8A169B883C953 /* SessionDelegate.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SessionDelegate.swift; path = Source/SessionDelegate.swift; sourceTree = "<group>"; };
+		8A563B42586896A24F374C585651883D /* SwiftSpinner-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SwiftSpinner-prefix.pch"; sourceTree = "<group>"; };
+		8BA729B68ED962C4E6060556D7C1859A /* Pods-SlideMenuControllerSwift.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-SlideMenuControllerSwift.debug.xcconfig"; sourceTree = "<group>"; };
+		8F3F1D28DCA505F6F0BB33A8B8369A72 /* SlideMenuControllerSwift-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SlideMenuControllerSwift-prefix.pch"; sourceTree = "<group>"; };
+		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		9A8A7CD8D1AE5B6F78E48A65BB0DB96B /* Pods-SlideMenuControllerSwift-iOS-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-SlideMenuControllerSwift-iOS-resources.sh"; sourceTree = "<group>"; };
+		9C55EAAB06863B93527C66A88236557E /* SlideMenuControllerSwift-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SlideMenuControllerSwift-umbrella.h"; sourceTree = "<group>"; };
+		A40E6DE2BC4C12AF8079544B7A1D3891 /* Pods-SlideMenuControllerSwift-iOS-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-SlideMenuControllerSwift-iOS-acknowledgements.markdown"; sourceTree = "<group>"; };
+		A7C9C91DAAC37806FA038A6E7150D5C7 /* DispatchQueue+Alamofire.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "DispatchQueue+Alamofire.swift"; path = "Source/DispatchQueue+Alamofire.swift"; sourceTree = "<group>"; };
+		AA68F739BD167741AEA821B17DE829C8 /* SwiftSpinner.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SwiftSpinner.swift; path = SwiftSpinner/SwiftSpinner.swift; sourceTree = "<group>"; };
+		AF538A2A406F6BCD742B02DC5F6BCCF5 /* Pods-SlideMenuControllerSwift-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-SlideMenuControllerSwift-acknowledgements.markdown"; sourceTree = "<group>"; };
+		B3558A516FBE9692D8741F0B666C8824 /* Timeline.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Timeline.swift; path = Source/Timeline.swift; sourceTree = "<group>"; };
+		B4FD8A20B7D19E452171576CB1A93000 /* SlideMenuController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SlideMenuController.swift; path = Source/SlideMenuController.swift; sourceTree = "<group>"; };
+		B5108B7003CC234B8FAC462AE102FA92 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B8E131CFC4C23A8CC0230CEB532F76C3 /* ParameterEncoding.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ParameterEncoding.swift; path = Source/ParameterEncoding.swift; sourceTree = "<group>"; };
+		B9F8D548F99EF4DED6CFFF7A65108D45 /* SwiftyJSON.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SwiftyJSON.swift; path = Source/SwiftyJSON.swift; sourceTree = "<group>"; };
+		BE924D59A6AE0A7335C8DE668818F740 /* SwiftSpinner.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = SwiftSpinner.modulemap; sourceTree = "<group>"; };
+		BF22CA6456224D6C9396E50F693F7028 /* Pods-SlideMenuControllerSwift-iOS.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = "Pods-SlideMenuControllerSwift-iOS.modulemap"; sourceTree = "<group>"; };
+		C0BAC37F45CFE0D6BAB72B3037149060 /* Alamofire-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Alamofire-umbrella.h"; sourceTree = "<group>"; };
+		C607689506953A90FA96077D8D33B92E /* SessionManager.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SessionManager.swift; path = Source/SessionManager.swift; sourceTree = "<group>"; };
+		C9140BB19957C5306915CD8F6488F219 /* Alamofire.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Alamofire.framework; path = Alamofire.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		CB1FD70A8D925F61C72BF94570C95D40 /* SwiftyJSON-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SwiftyJSON-umbrella.h"; sourceTree = "<group>"; };
+		CFF3E74F9ABABF9F7BE31634EF8387AF /* Pods_SlideMenuControllerSwift.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_SlideMenuControllerSwift.framework; path = "Pods-SlideMenuControllerSwift.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		D8C5ABDE680385F4B40DFD51558BA11A /* SwiftyJSON.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = SwiftyJSON.framework; path = SwiftyJSON.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		DA52C076E2FA4A8D708E7F2B2496D603 /* Pods-SlideMenuControllerSwift-iOS-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-SlideMenuControllerSwift-iOS-umbrella.h"; sourceTree = "<group>"; };
+		DDDA391F16FD56E473CB5C0086B64357 /* ResponseSerialization.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ResponseSerialization.swift; path = Source/ResponseSerialization.swift; sourceTree = "<group>"; };
+		DFA2B851D5065BB3F7331B050677AE60 /* Alamofire.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Alamofire.xcconfig; sourceTree = "<group>"; };
+		E1C1E736D147C5FE7B399AC3D571642A /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E3CA8D5DD211F31358ED4466F4D817A9 /* Alamofire-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Alamofire-prefix.pch"; sourceTree = "<group>"; };
+		E5E6298CADB37157BFA8B50AC269431E /* Notifications.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Notifications.swift; path = Source/Notifications.swift; sourceTree = "<group>"; };
+		E9384A10F44C7FF7FC6C3839605D5F0E /* MultipartFormData.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = MultipartFormData.swift; path = Source/MultipartFormData.swift; sourceTree = "<group>"; };
+		E9E10B943658080D3FC7989D49F2C5FA /* Pods-SlideMenuControllerSwift-iOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-SlideMenuControllerSwift-iOS.debug.xcconfig"; sourceTree = "<group>"; };
+		F4A37A75568B573BE1DF079BC6806641 /* SwiftSpinner-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "SwiftSpinner-dummy.m"; sourceTree = "<group>"; };
+		FEC547FC5179846384B770549069A8C4 /* Pods-SlideMenuControllerSwift.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-SlideMenuControllerSwift.release.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		480C0052395D52B5C6243D44CC6DC3C4 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FA97A87CE2DCB43D206E0707524BE807 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		736BA479942A13CDA756D03F92E8A83D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4C9DBA7D7F9613475CFCCD1ACED9A73A /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7AF9605B2C8C859D569B6AC6661A9100 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				630A71D5FCED9760C6332EE72192FA0D /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		99195E4207764744AEC07ECCBCD550EB /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A04BFC558D69E7DBB68023C80A9CFE4E /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E7BC360939E870764E1613609ADB210D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AB4ACE216A4A064B92761F65088F86CC /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FA7A82CCCF117B366873B9CB07078865 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5441DFBC3828570D09C9FD1C3F5EE70D /* Foundation.framework in Frameworks */,
+				3590C54C73D3426112CE3D0E7FCC8F5F /* UIKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		096082BF96440E10A1E7700F6F3E8638 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				C9140BB19957C5306915CD8F6488F219 /* Alamofire.framework */,
+				CFF3E74F9ABABF9F7BE31634EF8387AF /* Pods_SlideMenuControllerSwift.framework */,
+				2A24092211822E9432E43BC8A3D181AA /* Pods_SlideMenuControllerSwift_iOS.framework */,
+				38FFC4373CEF04C13C90744E6288B567 /* SlideMenuControllerSwift.framework */,
+				3DB0F70C6F906D2CE7C4DBCE4156E1E8 /* SwiftSpinner.framework */,
+				D8C5ABDE680385F4B40DFD51558BA11A /* SwiftyJSON.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		14E32EB6933AF87811F4CB249D390318 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				5B6942F0AF332687F26069BD0F25A511 /* Alamofire */,
+				8635C826885E65B1394D05E7B40E99C0 /* SlideMenuControllerSwift */,
+				EF65EF8417F15AF5C8AC31922CA22D70 /* SwiftSpinner */,
+				E1A3790964C8D1A4C7824CBCD02FE735 /* SwiftyJSON */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		232AC11CBEEEABB91E61D9E1C828B15C /* Targets Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				FECAF80CEF1C86A71D3A03EFE4BD1FAF /* Pods-SlideMenuControllerSwift */,
+				BA1124CD9E6C29BBD68DF2F785D71689 /* Pods-SlideMenuControllerSwift-iOS */,
+			);
+			name = "Targets Support Files";
+			sourceTree = "<group>";
+		};
+		433CD3331B6C3787F473C941B61FC68F /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				E6EE98446B568159EE277B68FD442AF0 /* iOS */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		5B6942F0AF332687F26069BD0F25A511 /* Alamofire */ = {
+			isa = PBXGroup;
+			children = (
+				700E6CD18454648C4B2849F4FD971440 /* AFError.swift */,
+				12D93CF4C39202304BB16BB25CE6EBFF /* Alamofire.swift */,
+				A7C9C91DAAC37806FA038A6E7150D5C7 /* DispatchQueue+Alamofire.swift */,
+				E9384A10F44C7FF7FC6C3839605D5F0E /* MultipartFormData.swift */,
+				44E4BF0F5DB7A2CF6CD2FCE06AEC5AA4 /* NetworkReachabilityManager.swift */,
+				E5E6298CADB37157BFA8B50AC269431E /* Notifications.swift */,
+				B8E131CFC4C23A8CC0230CEB532F76C3 /* ParameterEncoding.swift */,
+				7A279BB2D27188F8E5ED3F5183E0063B /* Request.swift */,
+				5548E146A0DC5995217CDE06DF8D57AE /* Response.swift */,
+				DDDA391F16FD56E473CB5C0086B64357 /* ResponseSerialization.swift */,
+				67A3A323E74678C32C886471E9B361E4 /* Result.swift */,
+				50534F90FA3275EEE4298DE755248513 /* ServerTrustPolicy.swift */,
+				8A3C47D285AE2A41A2C8A169B883C953 /* SessionDelegate.swift */,
+				C607689506953A90FA96077D8D33B92E /* SessionManager.swift */,
+				814D034FD8271180C80E5E564AE070BE /* TaskDelegate.swift */,
+				B3558A516FBE9692D8741F0B666C8824 /* Timeline.swift */,
+				1EBB5AAFC7A3BB8EE781163883821446 /* Validation.swift */,
+				B59245D718CD5B3AA08D380A39429AE3 /* Support Files */,
+			);
+			name = Alamofire;
+			path = Alamofire;
+			sourceTree = "<group>";
+		};
+		7DB346D0F39D3F0E887471402A8071AB = {
+			isa = PBXGroup;
+			children = (
+				93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */,
+				433CD3331B6C3787F473C941B61FC68F /* Frameworks */,
+				14E32EB6933AF87811F4CB249D390318 /* Pods */,
+				096082BF96440E10A1E7700F6F3E8638 /* Products */,
+				232AC11CBEEEABB91E61D9E1C828B15C /* Targets Support Files */,
+			);
+			sourceTree = "<group>";
+		};
+		8635C826885E65B1394D05E7B40E99C0 /* SlideMenuControllerSwift */ = {
+			isa = PBXGroup;
+			children = (
+				7AF2047E91BCE26664F8C022DEE201DD /* Info.plist */,
+				B4FD8A20B7D19E452171576CB1A93000 /* SlideMenuController.swift */,
+				043B5ECE7523FF000048D4B3D0EBD0E8 /* SlideMenuControllerSwift.h */,
+				D97CFADE888889FDDD725011AA258366 /* Support Files */,
+			);
+			name = SlideMenuControllerSwift;
+			path = SlideMenuControllerSwift;
+			sourceTree = "<group>";
+		};
+		B59245D718CD5B3AA08D380A39429AE3 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				4DD001C3D8A91EFD3FE3224E67A18D50 /* Alamofire.modulemap */,
+				DFA2B851D5065BB3F7331B050677AE60 /* Alamofire.xcconfig */,
+				2864BF19C2AAEC797FD968CC13A8E04B /* Alamofire-dummy.m */,
+				E3CA8D5DD211F31358ED4466F4D817A9 /* Alamofire-prefix.pch */,
+				C0BAC37F45CFE0D6BAB72B3037149060 /* Alamofire-umbrella.h */,
+				07D0E53B09680973AD430948708E9A9D /* Info.plist */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/Alamofire";
+			sourceTree = "<group>";
+		};
+		BA1124CD9E6C29BBD68DF2F785D71689 /* Pods-SlideMenuControllerSwift-iOS */ = {
+			isa = PBXGroup;
+			children = (
+				53824DD5F95FE8D5B77823CFB5015A9A /* Info.plist */,
+				BF22CA6456224D6C9396E50F693F7028 /* Pods-SlideMenuControllerSwift-iOS.modulemap */,
+				A40E6DE2BC4C12AF8079544B7A1D3891 /* Pods-SlideMenuControllerSwift-iOS-acknowledgements.markdown */,
+				772297CCAB13FB6CFEE6BC23B2A0B22E /* Pods-SlideMenuControllerSwift-iOS-acknowledgements.plist */,
+				27372A2ADC9DFE55726F305DCD6BD4DF /* Pods-SlideMenuControllerSwift-iOS-dummy.m */,
+				9A8A7CD8D1AE5B6F78E48A65BB0DB96B /* Pods-SlideMenuControllerSwift-iOS-resources.sh */,
+				DA52C076E2FA4A8D708E7F2B2496D603 /* Pods-SlideMenuControllerSwift-iOS-umbrella.h */,
+				E9E10B943658080D3FC7989D49F2C5FA /* Pods-SlideMenuControllerSwift-iOS.debug.xcconfig */,
+				4401FC8CB00A8E8D4C1D5681E1144F6D /* Pods-SlideMenuControllerSwift-iOS.release.xcconfig */,
+			);
+			name = "Pods-SlideMenuControllerSwift-iOS";
+			path = "Target Support Files/Pods-SlideMenuControllerSwift-iOS";
+			sourceTree = "<group>";
+		};
+		C6C425F1008D6D0C36FD0A2BE6E3E678 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				B5108B7003CC234B8FAC462AE102FA92 /* Info.plist */,
+				BE924D59A6AE0A7335C8DE668818F740 /* SwiftSpinner.modulemap */,
+				18F650E898ADF5DC6C47D0C805FB5FE1 /* SwiftSpinner.xcconfig */,
+				F4A37A75568B573BE1DF079BC6806641 /* SwiftSpinner-dummy.m */,
+				8A563B42586896A24F374C585651883D /* SwiftSpinner-prefix.pch */,
+				38D97EF3F3B9A5ECA7CA19F1BF5B3E0F /* SwiftSpinner-umbrella.h */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/SwiftSpinner";
+			sourceTree = "<group>";
+		};
+		D7559D3B9C62DCE2C9504B2C80A61742 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				52FABCA0482063386B77602596C67257 /* Info.plist */,
+				16F5B475E0BFA6142284B34B5A51E69A /* SwiftyJSON.modulemap */,
+				6B1D4A0AD048641B58A76324FBF802B2 /* SwiftyJSON.xcconfig */,
+				55BBA3FEDDA78056DB473C3CFAA7258B /* SwiftyJSON-dummy.m */,
+				64ED7F68D5474C3A95483E48D3247605 /* SwiftyJSON-prefix.pch */,
+				CB1FD70A8D925F61C72BF94570C95D40 /* SwiftyJSON-umbrella.h */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/SwiftyJSON";
+			sourceTree = "<group>";
+		};
+		D97CFADE888889FDDD725011AA258366 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				E1C1E736D147C5FE7B399AC3D571642A /* Info.plist */,
+				4EA955881F48FA581E3836C8F9671C5E /* SlideMenuControllerSwift.modulemap */,
+				85F37C940CE6143D331F9FFC3D1BC0C7 /* SlideMenuControllerSwift.xcconfig */,
+				636B06E649CDE3097C8664199EA1B840 /* SlideMenuControllerSwift-dummy.m */,
+				8F3F1D28DCA505F6F0BB33A8B8369A72 /* SlideMenuControllerSwift-prefix.pch */,
+				9C55EAAB06863B93527C66A88236557E /* SlideMenuControllerSwift-umbrella.h */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/SlideMenuControllerSwift";
+			sourceTree = "<group>";
+		};
+		E1A3790964C8D1A4C7824CBCD02FE735 /* SwiftyJSON */ = {
+			isa = PBXGroup;
+			children = (
+				B9F8D548F99EF4DED6CFFF7A65108D45 /* SwiftyJSON.swift */,
+				D7559D3B9C62DCE2C9504B2C80A61742 /* Support Files */,
+			);
+			name = SwiftyJSON;
+			path = SwiftyJSON;
+			sourceTree = "<group>";
+		};
+		E6EE98446B568159EE277B68FD442AF0 /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				616BEB51ECCAD129BDBCB7A956B56CC6 /* Foundation.framework */,
+				7EC994CDC2D681BA26389F78A7E4B325 /* UIKit.framework */,
+			);
+			name = iOS;
+			sourceTree = "<group>";
+		};
+		EF65EF8417F15AF5C8AC31922CA22D70 /* SwiftSpinner */ = {
+			isa = PBXGroup;
+			children = (
+				095B59565B2B33C5378672677225CEFC /* SwiftSpinner.h */,
+				AA68F739BD167741AEA821B17DE829C8 /* SwiftSpinner.swift */,
+				C6C425F1008D6D0C36FD0A2BE6E3E678 /* Support Files */,
+			);
+			name = SwiftSpinner;
+			path = SwiftSpinner;
+			sourceTree = "<group>";
+		};
+		FECAF80CEF1C86A71D3A03EFE4BD1FAF /* Pods-SlideMenuControllerSwift */ = {
+			isa = PBXGroup;
+			children = (
+				32694AE67005CF4075A19E0A35CE27A0 /* Info.plist */,
+				6FA4162F8F9D064D60C78FC9645C9F14 /* Pods-SlideMenuControllerSwift.modulemap */,
+				AF538A2A406F6BCD742B02DC5F6BCCF5 /* Pods-SlideMenuControllerSwift-acknowledgements.markdown */,
+				35FC371B54FB0CE7F6811E75C8F08788 /* Pods-SlideMenuControllerSwift-acknowledgements.plist */,
+				0F57C5746A3FE8510827DE4129FE2AE6 /* Pods-SlideMenuControllerSwift-dummy.m */,
+				82E610669823BB0C201BE4AE1FD2BC93 /* Pods-SlideMenuControllerSwift-frameworks.sh */,
+				78D5C44EB9FE5A765B01A61E209339F0 /* Pods-SlideMenuControllerSwift-resources.sh */,
+				89E39B89017DBE934B2517C19DADA26A /* Pods-SlideMenuControllerSwift-umbrella.h */,
+				8BA729B68ED962C4E6060556D7C1859A /* Pods-SlideMenuControllerSwift.debug.xcconfig */,
+				FEC547FC5179846384B770549069A8C4 /* Pods-SlideMenuControllerSwift.release.xcconfig */,
+			);
+			name = "Pods-SlideMenuControllerSwift";
+			path = "Target Support Files/Pods-SlideMenuControllerSwift";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		00FF7D50C3056BBFF1BD242C3E2CFA1B /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				39DE2E7307DC229456BFDCEBF92FA276 /* SwiftSpinner-umbrella.h in Headers */,
+				A20103C5429FF5B153DE677E9B906ABE /* SwiftSpinner.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		34A70D3B780EE0CAEAEDACFF6D8B23ED /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				86370FD6C32CAA1F9715044489624742 /* Pods-SlideMenuControllerSwift-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		35DD6323FD06481F09AB0ABF78F10CB0 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C7E2C1FC6EE41401217509EECA309392 /* SwiftyJSON-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B4002B6E97835FDCCAA5963EFE09A3E0 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1B9EDEDC964E6B08F78920B4F4B9DB84 /* Alamofire-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CFB8FB04ADBF0ED37A9D329FEA7DF553 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				861543D9247FE5631575B64ECCEED8D5 /* SlideMenuControllerSwift-umbrella.h in Headers */,
+				2CB1F49984E68E4EC1913D88AD41D51A /* SlideMenuControllerSwift.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D5F565F69F41E59570101125D6AF0670 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C1B1DDA56503B11C8589AC41B9AC8854 /* Pods-SlideMenuControllerSwift-iOS-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		0511C885E6031C1FE7F42E14F3660FF1 /* Pods-SlideMenuControllerSwift-iOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = AD9D250A6FF2B03F14E0F8EF3D4BCA4E /* Build configuration list for PBXNativeTarget "Pods-SlideMenuControllerSwift-iOS" */;
+			buildPhases = (
+				22FCB005A70B358C5AAF0DA80BD5E42F /* Sources */,
+				E7BC360939E870764E1613609ADB210D /* Frameworks */,
+				D5F565F69F41E59570101125D6AF0670 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Pods-SlideMenuControllerSwift-iOS";
+			productName = "Pods-SlideMenuControllerSwift-iOS";
+			productReference = 2A24092211822E9432E43BC8A3D181AA /* Pods_SlideMenuControllerSwift_iOS.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		407100AEF974D243ADB099F3C14E24DB /* SwiftSpinner */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 6F3A3C510BA60593ED01A68D9CA270B6 /* Build configuration list for PBXNativeTarget "SwiftSpinner" */;
+			buildPhases = (
+				AEC637325EF01492C0FE5099BABABDA9 /* Sources */,
+				FA7A82CCCF117B366873B9CB07078865 /* Frameworks */,
+				00FF7D50C3056BBFF1BD242C3E2CFA1B /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = SwiftSpinner;
+			productName = SwiftSpinner;
+			productReference = 3DB0F70C6F906D2CE7C4DBCE4156E1E8 /* SwiftSpinner.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		51CFFFE2397B8E2B966300F32FE3D514 /* SwiftyJSON */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D849EF54730CB953D5B23D2FEF8100C3 /* Build configuration list for PBXNativeTarget "SwiftyJSON" */;
+			buildPhases = (
+				86B27B641FF543564C0D7EC1C6727B0F /* Sources */,
+				480C0052395D52B5C6243D44CC6DC3C4 /* Frameworks */,
+				35DD6323FD06481F09AB0ABF78F10CB0 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = SwiftyJSON;
+			productName = SwiftyJSON;
+			productReference = D8C5ABDE680385F4B40DFD51558BA11A /* SwiftyJSON.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		72CB3B1F0A58735048D843BE589A38B9 /* Pods-SlideMenuControllerSwift */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 77AA77588F945526A35BEC4C0DE6FB5F /* Build configuration list for PBXNativeTarget "Pods-SlideMenuControllerSwift" */;
+			buildPhases = (
+				AD394F65B6BD7B28F405F683080A86F2 /* Sources */,
+				736BA479942A13CDA756D03F92E8A83D /* Frameworks */,
+				34A70D3B780EE0CAEAEDACFF6D8B23ED /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				6E5391C0BB74FBD9FDF621C5F4E148AE /* PBXTargetDependency */,
+				315854D323C1887BCC9A02F2EE2FBA86 /* PBXTargetDependency */,
+				AD9717DC7F477AE8BFD3B8830411CEFC /* PBXTargetDependency */,
+				BFFD5F1B7047A10DB8C02839A9B09BE6 /* PBXTargetDependency */,
+			);
+			name = "Pods-SlideMenuControllerSwift";
+			productName = "Pods-SlideMenuControllerSwift";
+			productReference = CFF3E74F9ABABF9F7BE31634EF8387AF /* Pods_SlideMenuControllerSwift.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		88E9EC28B8B46C3631E6B242B50F4442 /* Alamofire */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 419E5D95491847CD79841B971A8A3277 /* Build configuration list for PBXNativeTarget "Alamofire" */;
+			buildPhases = (
+				32B9974868188C4803318E36329C87FE /* Sources */,
+				99195E4207764744AEC07ECCBCD550EB /* Frameworks */,
+				B4002B6E97835FDCCAA5963EFE09A3E0 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Alamofire;
+			productName = Alamofire;
+			productReference = C9140BB19957C5306915CD8F6488F219 /* Alamofire.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		E0D9B60E0CC5D2BAAE8BA2E4192F1602 /* SlideMenuControllerSwift */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 5019F4DAD8E6198D2AAA895BADDE4DFF /* Build configuration list for PBXNativeTarget "SlideMenuControllerSwift" */;
+			buildPhases = (
+				34F9EB083C13E9BCBE13BE93DFE0F6D3 /* Sources */,
+				7AF9605B2C8C859D569B6AC6661A9100 /* Frameworks */,
+				CFB8FB04ADBF0ED37A9D329FEA7DF553 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = SlideMenuControllerSwift;
+			productName = SlideMenuControllerSwift;
+			productReference = 38FFC4373CEF04C13C90744E6288B567 /* SlideMenuControllerSwift.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		D41D8CD98F00B204E9800998ECF8427E /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0730;
+				LastUpgradeCheck = 0700;
+			};
+			buildConfigurationList = 2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 7DB346D0F39D3F0E887471402A8071AB;
+			productRefGroup = 096082BF96440E10A1E7700F6F3E8638 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				88E9EC28B8B46C3631E6B242B50F4442 /* Alamofire */,
+				72CB3B1F0A58735048D843BE589A38B9 /* Pods-SlideMenuControllerSwift */,
+				0511C885E6031C1FE7F42E14F3660FF1 /* Pods-SlideMenuControllerSwift-iOS */,
+				E0D9B60E0CC5D2BAAE8BA2E4192F1602 /* SlideMenuControllerSwift */,
+				407100AEF974D243ADB099F3C14E24DB /* SwiftSpinner */,
+				51CFFFE2397B8E2B966300F32FE3D514 /* SwiftyJSON */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		22FCB005A70B358C5AAF0DA80BD5E42F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7AEB6C5FB370A5FFC042451B52812330 /* Pods-SlideMenuControllerSwift-iOS-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		32B9974868188C4803318E36329C87FE /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9ED2BB2981896E0A39EFA365503F58CE /* AFError.swift in Sources */,
+				A9EEEA7477981DEEBC72432DE9990A4B /* Alamofire-dummy.m in Sources */,
+				F8B3D3092ED0417E8CDF32033F6122F5 /* Alamofire.swift in Sources */,
+				61200D01A1855D7920CEF835C8BE00B0 /* DispatchQueue+Alamofire.swift in Sources */,
+				B65FCF589DA398C3EFE0128064E510EC /* MultipartFormData.swift in Sources */,
+				A2A6F71B727312BD45CC7A4AAD7B0AB7 /* NetworkReachabilityManager.swift in Sources */,
+				EFD264FC408EBF3BA2528E70B08DDD94 /* Notifications.swift in Sources */,
+				BE5C67A07E289FE1F9BE27335B159997 /* ParameterEncoding.swift in Sources */,
+				5387216E723A3C68E851CA15573CDD71 /* Request.swift in Sources */,
+				CB6D60925223897FFA2662667DF83E8A /* Response.swift in Sources */,
+				F6BECD98B97CBFEBE2C96F0E9E72A6C0 /* ResponseSerialization.swift in Sources */,
+				7D8CC01E8C9EFFF9F4D65406CDE0AB66 /* Result.swift in Sources */,
+				62F65AD8DC4F0F9610F4B8B4738EC094 /* ServerTrustPolicy.swift in Sources */,
+				7B5FE28C7EA4122B0598738E54DBEBD8 /* SessionDelegate.swift in Sources */,
+				AE1EF48399533730D0066E04B22CA2D6 /* SessionManager.swift in Sources */,
+				3626B94094672CB1C9DEA32B9F9502E1 /* TaskDelegate.swift in Sources */,
+				10EB23E9ECC4B33E16933BB1EA560B6A /* Timeline.swift in Sources */,
+				BBEFE2F9CEB73DC7BD97FFA66A0D9D4F /* Validation.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		34F9EB083C13E9BCBE13BE93DFE0F6D3 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C58854F8A8E0B8FE1BD318FF9C86C37F /* Info.plist in Sources */,
+				B8DDE1A357AAF5F370653F03F94AA1E6 /* SlideMenuController.swift in Sources */,
+				A7F8B919346BA5438AA0EADD3328C1A6 /* SlideMenuControllerSwift-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		86B27B641FF543564C0D7EC1C6727B0F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A046D782486C49A139B885F5EEB2C4AA /* SwiftyJSON-dummy.m in Sources */,
+				7F45FB639488DB2A6BCA07CD5BBBD041 /* SwiftyJSON.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AD394F65B6BD7B28F405F683080A86F2 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E9C98A6016DEDD09ACD2873330D0E3EA /* Pods-SlideMenuControllerSwift-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AEC637325EF01492C0FE5099BABABDA9 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F4F271A2EAA45948297435861578FD48 /* SwiftSpinner-dummy.m in Sources */,
+				569C18AE26EAD46358703CAA2A7492D4 /* SwiftSpinner.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		315854D323C1887BCC9A02F2EE2FBA86 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = SlideMenuControllerSwift;
+			target = E0D9B60E0CC5D2BAAE8BA2E4192F1602 /* SlideMenuControllerSwift */;
+			targetProxy = DB84FFA6ED6258654270A317165FF6AE /* PBXContainerItemProxy */;
+		};
+		6E5391C0BB74FBD9FDF621C5F4E148AE /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = Alamofire;
+			target = 88E9EC28B8B46C3631E6B242B50F4442 /* Alamofire */;
+			targetProxy = F9CB2C236A997170CF35F03062464C23 /* PBXContainerItemProxy */;
+		};
+		AD9717DC7F477AE8BFD3B8830411CEFC /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = SwiftSpinner;
+			target = 407100AEF974D243ADB099F3C14E24DB /* SwiftSpinner */;
+			targetProxy = ACF16007E1296EC9E958332D0365153D /* PBXContainerItemProxy */;
+		};
+		BFFD5F1B7047A10DB8C02839A9B09BE6 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = SwiftyJSON;
+			target = 51CFFFE2397B8E2B966300F32FE3D514 /* SwiftyJSON */;
+			targetProxy = 6E3A15E080D2020E2573BA432E389838 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		015A368F878AC3E2CEAE21DDE8026304 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGNING_REQUIRED = NO;
+				COPY_PHASE_STRIP = NO;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_DEBUG=1",
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				ONLY_ACTIVE_ARCH = YES;
+				PROVISIONING_PROFILE_SPECIFIER = NO_SIGNING/;
+				STRIP_INSTALLED_PRODUCT = NO;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Debug;
+		};
+		0A29B6F510198AF64EFD762EF6FA97A5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = DFA2B851D5065BB3F7331B050677AE60 /* Alamofire.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/Alamofire/Alamofire-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/Alamofire/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/Alamofire/Alamofire.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_NAME = Alamofire;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		39A12DFD444F6835E5BFEAB9ACB8A92E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 85F37C940CE6143D331F9FFC3D1BC0C7 /* SlideMenuControllerSwift.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/SlideMenuControllerSwift/SlideMenuControllerSwift-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/SlideMenuControllerSwift/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/SlideMenuControllerSwift/SlideMenuControllerSwift.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				PRODUCT_NAME = SlideMenuControllerSwift;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		3A13983C1703B32DBC9524847494BECC /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6B1D4A0AD048641B58A76324FBF802B2 /* SwiftyJSON.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/SwiftyJSON/SwiftyJSON-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/SwiftyJSON/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/SwiftyJSON/SwiftyJSON.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_NAME = SwiftyJSON;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		3FE821392445CF84816030712A0D5883 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = FEC547FC5179846384B770549069A8C4 /* Pods-SlideMenuControllerSwift.release.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods-SlideMenuControllerSwift/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-SlideMenuControllerSwift/Pods-SlideMenuControllerSwift.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = Pods_SlideMenuControllerSwift;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		44CDBB6D11DE06DB64D6268622BDC47E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGNING_REQUIRED = NO;
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_RELEASE=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				PROVISIONING_PROFILE_SPECIFIER = NO_SIGNING/;
+				STRIP_INSTALLED_PRODUCT = NO;
+				SYMROOT = "${SRCROOT}/../build";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		4D61B58EB191AF8D6805B4F46CD55EB4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4401FC8CB00A8E8D4C1D5681E1144F6D /* Pods-SlideMenuControllerSwift-iOS.release.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods-SlideMenuControllerSwift-iOS/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-SlideMenuControllerSwift-iOS/Pods-SlideMenuControllerSwift-iOS.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = Pods_SlideMenuControllerSwift_iOS;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		5D6DC628835ABCDF4C590251BC0308FF /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 85F37C940CE6143D331F9FFC3D1BC0C7 /* SlideMenuControllerSwift.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/SlideMenuControllerSwift/SlideMenuControllerSwift-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/SlideMenuControllerSwift/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/SlideMenuControllerSwift/SlideMenuControllerSwift.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_NAME = SlideMenuControllerSwift;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		5F5030C1DD0CFB745DE3F839A1ACD515 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8BA729B68ED962C4E6060556D7C1859A /* Pods-SlideMenuControllerSwift.debug.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods-SlideMenuControllerSwift/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-SlideMenuControllerSwift/Pods-SlideMenuControllerSwift.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = Pods_SlideMenuControllerSwift;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		AEC30F8EE700E58A4880E3E2D4DDE189 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 18F650E898ADF5DC6C47D0C805FB5FE1 /* SwiftSpinner.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/SwiftSpinner/SwiftSpinner-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/SwiftSpinner/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/SwiftSpinner/SwiftSpinner.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				PRODUCT_NAME = SwiftSpinner;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		CC5A13B391B66827370017D4869786A0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 18F650E898ADF5DC6C47D0C805FB5FE1 /* SwiftSpinner.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/SwiftSpinner/SwiftSpinner-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/SwiftSpinner/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/SwiftSpinner/SwiftSpinner.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_NAME = SwiftSpinner;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		CFA1DCB67B4F94E0F05FC2B972EF69EE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6B1D4A0AD048641B58A76324FBF802B2 /* SwiftyJSON.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/SwiftyJSON/SwiftyJSON-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/SwiftyJSON/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/SwiftyJSON/SwiftyJSON.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				PRODUCT_NAME = SwiftyJSON;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		F383079BFBF927813EA3613CFB679FDE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = DFA2B851D5065BB3F7331B050677AE60 /* Alamofire.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/Alamofire/Alamofire-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/Alamofire/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/Alamofire/Alamofire.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				PRODUCT_NAME = Alamofire;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		FC5344E20B6E8840C2CD9ABA37CF0327 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = E9E10B943658080D3FC7989D49F2C5FA /* Pods-SlideMenuControllerSwift-iOS.debug.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods-SlideMenuControllerSwift-iOS/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-SlideMenuControllerSwift-iOS/Pods-SlideMenuControllerSwift-iOS.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = Pods_SlideMenuControllerSwift_iOS;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				015A368F878AC3E2CEAE21DDE8026304 /* Debug */,
+				44CDBB6D11DE06DB64D6268622BDC47E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		419E5D95491847CD79841B971A8A3277 /* Build configuration list for PBXNativeTarget "Alamofire" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F383079BFBF927813EA3613CFB679FDE /* Debug */,
+				0A29B6F510198AF64EFD762EF6FA97A5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		5019F4DAD8E6198D2AAA895BADDE4DFF /* Build configuration list for PBXNativeTarget "SlideMenuControllerSwift" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				39A12DFD444F6835E5BFEAB9ACB8A92E /* Debug */,
+				5D6DC628835ABCDF4C590251BC0308FF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		6F3A3C510BA60593ED01A68D9CA270B6 /* Build configuration list for PBXNativeTarget "SwiftSpinner" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AEC30F8EE700E58A4880E3E2D4DDE189 /* Debug */,
+				CC5A13B391B66827370017D4869786A0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		77AA77588F945526A35BEC4C0DE6FB5F /* Build configuration list for PBXNativeTarget "Pods-SlideMenuControllerSwift" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5F5030C1DD0CFB745DE3F839A1ACD515 /* Debug */,
+				3FE821392445CF84816030712A0D5883 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		AD9D250A6FF2B03F14E0F8EF3D4BCA4E /* Build configuration list for PBXNativeTarget "Pods-SlideMenuControllerSwift-iOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FC5344E20B6E8840C2CD9ABA37CF0327 /* Debug */,
+				4D61B58EB191AF8D6805B4F46CD55EB4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D849EF54730CB953D5B23D2FEF8100C3 /* Build configuration list for PBXNativeTarget "SwiftyJSON" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CFA1DCB67B4F94E0F05FC2B972EF69EE /* Debug */,
+				3A13983C1703B32DBC9524847494BECC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+}
