@@ -1,9 +1,9 @@
 //
-//  ActiveScene.swift
-//  CongressUSA
+//  FavouriteBills.swift
+//  SlideMenuControllerSwift
 //
-//  Created by Mukai Nong on 11/19/16.
-//  Copyright © 2016 Mukai Nong. All rights reserved.
+//  Created by Mukai Nong on 11/27/16.
+//  Copyright © 2016 Yuji Hato. All rights reserved.
 //
 
 import UIKit
@@ -11,15 +11,15 @@ import SwiftyJSON
 import Alamofire
 import SwiftSpinner
 
-class ActiveScene: UIViewController, UITableViewDataSource, UITableViewDelegate, UISearchBarDelegate {
+class FavouriteBills: UIViewController, UITableViewDataSource, UITableViewDelegate, UISearchBarDelegate {
+    
+    @IBOutlet weak var tblJSON: UITableView!
     
     @IBOutlet weak var searchButton: UIBarButtonItem!
     
     @IBAction func searchFunction(_ sender: Any) {
         showHideSearch()
     }
-    
-    @IBOutlet weak var tblJSON: UITableView!
     
     let searchBar = UISearchBar().self
     
@@ -28,6 +28,14 @@ class ActiveScene: UIViewController, UITableViewDataSource, UITableViewDelegate,
     var arrRes = [[String:AnyObject]]() //Array of dictionary
     
     var filteredRes = [[String:AnyObject]]()
+    
+    var favouriteObjects = [String]()
+    
+    var allData = [[String:AnyObject]]()
+    
+    var allData1 = [[String:AnyObject]]()
+    
+    var allData2 = [[String:AnyObject]]()
     
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
         if searchText != "" {
@@ -49,19 +57,41 @@ class ActiveScene: UIViewController, UITableViewDataSource, UITableViewDelegate,
         
         createSearchBar()
         
-        //Alamofire.request(<#T##url: URLConvertible##URLConvertible#>) // either call php or json file
+        if UserDefaults.standard.array(forKey: "favouriteBillKey") != nil {
+            favouriteObjects = UserDefaults.standard.array(forKey: "favouriteBillKey") as! [String]
+        }
         
         Alamofire.request("http://newapp2016-env.us-west-2.elasticbeanstalk.com/congress_responsive.php?database=bills&activestatus=true").responseJSON { (responseJSON) -> Void in
             if((responseJSON.result.value) != nil) {
                 let swiftyJsonVar = JSON(responseJSON.result.value!)
                 
                 if let resData = swiftyJsonVar["results"].arrayObject {
-                    self.arrRes = resData as! [[String:AnyObject]]
-                    self.arrRes = self.arrRes.sorted {($0["introduced_on"] as? String)! > ($1["introduced_on"] as? String)!}
+                    self.allData1 = resData as! [[String:AnyObject]]
                 }
+            }
+        }
+        
+        Alamofire.request("http://newapp2016-env.us-west-2.elasticbeanstalk.com/congress_responsive.php?database=bills&activestatus=false").responseJSON { (responseJSON) -> Void in
+            if((responseJSON.result.value) != nil) {
+                let swiftyJsonVar = JSON(responseJSON.result.value!)
+                
+                if let resData = swiftyJsonVar["results"].arrayObject {
+                    self.allData2 = resData as! [[String:AnyObject]]
+                }
+                
+                self.allData = self.allData1 + self.allData2
+                
+                self.arrRes.removeAll()
+                
+                for name in self.favouriteObjects {
+                    let object = self.allData.filter{($0["bill_id"] as? String!)! == name}[0]
+                    self.arrRes.append(object)
+                }
+                
                 if self.arrRes.count > 0 {
                     self.tblJSON.reloadData()
                 }
+                
                 SwiftSpinner.hide()
             }
         }
@@ -69,6 +99,45 @@ class ActiveScene: UIViewController, UITableViewDataSource, UITableViewDelegate,
     
     override func viewWillAppear(_ animated: Bool) {
         self.tabBarController?.navigationItem.rightBarButtonItem = searchButton
+        
+        SwiftSpinner.show("Fetching data...")
+        
+        if UserDefaults.standard.array(forKey: "favouriteBillKey") != nil {
+            favouriteObjects = UserDefaults.standard.array(forKey: "favouriteBillKey") as! [String]
+        }
+        
+        Alamofire.request("http://newapp2016-env.us-west-2.elasticbeanstalk.com/congress_responsive.php?database=bills&activestatus=true").responseJSON { (responseJSON) -> Void in
+            if((responseJSON.result.value) != nil) {
+                let swiftyJsonVar = JSON(responseJSON.result.value!)
+                
+                if let resData = swiftyJsonVar["results"].arrayObject {
+                    self.allData1 = resData as! [[String:AnyObject]]
+                }
+            }
+        }
+        
+        Alamofire.request("http://newapp2016-env.us-west-2.elasticbeanstalk.com/congress_responsive.php?database=bills&activestatus=false").responseJSON { (responseJSON) -> Void in
+            if((responseJSON.result.value) != nil) {
+                let swiftyJsonVar = JSON(responseJSON.result.value!)
+                
+                if let resData = swiftyJsonVar["results"].arrayObject {
+                    self.allData2 = resData as! [[String:AnyObject]]
+                }
+                
+                self.allData = self.allData1 + self.allData2
+                
+                self.arrRes.removeAll()
+                
+                for name in self.favouriteObjects {
+                    let object = self.allData.filter{($0["bill_id"] as? String!)! == name}[0]
+                    self.arrRes.append(object)
+                }
+                
+                self.tblJSON.reloadData()
+                
+                SwiftSpinner.hide()
+            }
+        }
     }
     
     func createSearchBar() {
@@ -99,7 +168,6 @@ class ActiveScene: UIViewController, UITableViewDataSource, UITableViewDelegate,
         cell.textLabel?.numberOfLines = 3
         
         cell.textLabel?.text = dict["official_title"] as? String
-
         return cell
     }
     
@@ -124,19 +192,19 @@ class ActiveScene: UIViewController, UITableViewDataSource, UITableViewDelegate,
             
             viewController.localMessage = leg["official_title"] as! String
             
-            if leg["bill_id"] == nil {
+            if leg["bill_id"] is NSNull {
                 viewController.localArray[0] = "N.A."
             } else {
                 viewController.localArray[0] = leg["bill_id"] as! String
             }
             
-            if leg["bill_type"] == nil {
+            if leg["bill_type"] is NSNull {
                 viewController.localArray[1] = "N.A."
             } else {
                 viewController.localArray[1] = leg["bill_type"] as! String
             }
             
-            if leg["chamber"] == nil {
+            if leg["chamber"] is NSNull {
                 viewController.localArray[2] = "N.A."
             } else {
                 if leg["chamber"] as! String == "senate" {
@@ -152,7 +220,7 @@ class ActiveScene: UIViewController, UITableViewDataSource, UITableViewDelegate,
                 }
             }
             
-            if leg["last_action_at"] == nil {
+            if leg["last_action_at"] is NSNull {
                 viewController.localArray[3] = "N.A."
             } else {
                 let dateFormatterGet = DateFormatter()
@@ -168,13 +236,13 @@ class ActiveScene: UIViewController, UITableViewDataSource, UITableViewDelegate,
             
             var lastVersion = leg["last_version"] as? [String:AnyObject]
             
-            if lastVersion?["urls"]?["pdf"] == nil {
+            if lastVersion?["urls"]?["pdf"] is NSNull {
                 viewController.localArray[4] = "N.A."
             } else {
                 viewController.localArray[4] = lastVersion?["urls"]?["pdf"] as! String
             }
             
-            if leg["chamber"] == nil {
+            if leg["chamber"] is NSNull {
                 viewController.localArray[5] = "N.A."
             } else {
                 if leg["chamber"] as! String == "senate" {
@@ -184,7 +252,7 @@ class ActiveScene: UIViewController, UITableViewDataSource, UITableViewDelegate,
                 }
             }
             
-            if leg["last_vote_at"] == nil {
+            if leg["last_vote_at"] is NSNull {
                 viewController.localArray[6] = "N.A."
             } else {
                 let dateFormatterGet = DateFormatter()
@@ -198,7 +266,7 @@ class ActiveScene: UIViewController, UITableViewDataSource, UITableViewDelegate,
                 viewController.localArray[6] = dateFormatterPrint.string(from: date! as Date)
             }
             
-            if leg["history"]?["active"] == nil {
+            if leg["history"]?["active"] is NSNull {
                 viewController.localArray[7] = "N.A."
             } else {
                 if leg["history"]?["active"] as! Bool {
@@ -208,7 +276,7 @@ class ActiveScene: UIViewController, UITableViewDataSource, UITableViewDelegate,
                 }
             }
             
-            if leg["bill_id"] == nil {
+            if leg["bill_id"] is NSNull {
                 viewController.bill_idString = "N.A."
             } else {
                 viewController.bill_idString = leg["bill_id"] as! String
@@ -225,3 +293,4 @@ class ActiveScene: UIViewController, UITableViewDataSource, UITableViewDelegate,
     }
     
 }
+

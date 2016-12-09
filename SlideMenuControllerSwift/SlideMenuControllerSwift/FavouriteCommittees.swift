@@ -1,9 +1,9 @@
 //
-//  SenateCommitteeScene.swift
-//  CongressUSA
+//  FavouriteCommittees.swift
+//  SlideMenuControllerSwift
 //
-//  Created by Mukai Nong on 11/19/16.
-//  Copyright © 2016 Mukai Nong. All rights reserved.
+//  Created by Mukai Nong on 11/27/16.
+//  Copyright © 2016 Yuji Hato. All rights reserved.
 //
 
 import UIKit
@@ -11,15 +11,15 @@ import SwiftyJSON
 import Alamofire
 import SwiftSpinner
 
-class SenateCommitteeScene: UIViewController, UITableViewDataSource, UITableViewDelegate, UISearchBarDelegate {
+class FavouriteCommittees: UIViewController, UITableViewDataSource, UITableViewDelegate, UISearchBarDelegate {
+    
+    @IBOutlet weak var tblJSON: UITableView!
     
     @IBOutlet weak var searchButton: UIBarButtonItem!
     
     @IBAction func searchFunction(_ sender: Any) {
         showHideSearch()
     }
-    
-    @IBOutlet weak var tblJSON: UITableView!
     
     let searchBar = UISearchBar().self
     
@@ -28,6 +28,10 @@ class SenateCommitteeScene: UIViewController, UITableViewDataSource, UITableView
     var arrRes = [[String:AnyObject]]() //Array of dictionary
     
     var filteredRes = [[String:AnyObject]]()
+    
+    var favouriteObjects = [String]()
+    
+    var allData = [[String:AnyObject]]()
     
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
         if searchText != "" {
@@ -49,20 +53,29 @@ class SenateCommitteeScene: UIViewController, UITableViewDataSource, UITableView
         
         createSearchBar()
         
-        //Alamofire.request(<#T##url: URLConvertible##URLConvertible#>) // either call php or json file
+        if UserDefaults.standard.array(forKey: "favouriteCommitteeKey") != nil {
+            favouriteObjects = UserDefaults.standard.array(forKey: "favouriteCommitteeKey") as! [String]
+        }
         
         Alamofire.request("http://newapp2016-env.us-west-2.elasticbeanstalk.com/congress_responsive.php?database=committees").responseJSON { (responseJSON) -> Void in
             if((responseJSON.result.value) != nil) {
                 let swiftyJsonVar = JSON(responseJSON.result.value!)
                 
                 if let resData = swiftyJsonVar["results"].arrayObject {
-                    let r = resData as! [[String:AnyObject]]
-                    self.arrRes = r.filter{$0["chamber"] as? String! == "senate"}
-                    self.arrRes = self.arrRes.sorted {($0["name"] as? String)! < ($1["name"] as? String)!}
+                    self.allData = resData as! [[String:AnyObject]]
                 }
+                
+                self.arrRes.removeAll()
+                
+                for name in self.favouriteObjects {
+                    let object = self.allData.filter{($0["committee_id"] as? String!)! == name}[0]
+                    self.arrRes.append(object)
+                }
+                
                 if self.arrRes.count > 0 {
                     self.tblJSON.reloadData()
                 }
+                
                 SwiftSpinner.hide()
             }
         }
@@ -70,6 +83,33 @@ class SenateCommitteeScene: UIViewController, UITableViewDataSource, UITableView
     
     override func viewWillAppear(_ animated: Bool) {
         self.tabBarController?.navigationItem.rightBarButtonItem = searchButton
+        
+        SwiftSpinner.show("Fetching data...")
+        
+        if UserDefaults.standard.array(forKey: "favouriteCommitteeKey") != nil {
+            favouriteObjects = UserDefaults.standard.array(forKey: "favouriteCommitteeKey") as! [String]
+        }
+        
+        Alamofire.request("http://newapp2016-env.us-west-2.elasticbeanstalk.com/congress_responsive.php?database=committees").responseJSON { (responseJSON) -> Void in
+            if((responseJSON.result.value) != nil) {
+                let swiftyJsonVar = JSON(responseJSON.result.value!)
+                
+                if let resData = swiftyJsonVar["results"].arrayObject {
+                    self.allData = resData as! [[String:AnyObject]]
+                }
+                
+                self.arrRes.removeAll()
+                
+                for name in self.favouriteObjects {
+                    let object = self.allData.filter{($0["committee_id"] as? String!)! == name}[0]
+                    self.arrRes.append(object)
+                }
+                
+                self.tblJSON.reloadData()
+                
+                SwiftSpinner.hide()
+            }
+        }
     }
     
     func createSearchBar() {

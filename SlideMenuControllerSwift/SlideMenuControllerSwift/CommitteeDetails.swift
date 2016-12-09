@@ -16,6 +16,33 @@ class CommitteeDetails: UIViewController, UITableViewDataSource {
     @IBAction func backFunction(_ sender: Any) {
         dismiss(animated: true, completion: nil)
     }
+    
+    @IBOutlet weak var starIcon: UIBarButtonItem!
+    
+    @IBAction func starFunction(_ sender: Any) {
+        if !favouriteObjects.contains(committee_idString) {
+            favouriteObjects.append(committee_idString)
+            
+            let defaults = UserDefaults.standard
+            defaults.set(favouriteObjects, forKey: "favouriteCommitteeKey")
+            
+            
+            starIcon.image = UIImage(named: "Star Filled-50.png")
+        } else {
+            favouriteObjects.remove(object: committee_idString)
+            
+            let defaults = UserDefaults.standard
+            defaults.set(favouriteObjects, forKey: "favouriteCommitteeKey")
+            
+            
+            starIcon.image = UIImage(named: "Star-48.png")
+        }
+    }
+    
+    var favouriteObjects = [String]()
+    
+    var committee_idString = ""
+    
     var localMessage = ""
     
     var localArray:[String] = ["","","","",""]
@@ -24,6 +51,14 @@ class CommitteeDetails: UIViewController, UITableViewDataSource {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        if UserDefaults.standard.array(forKey: "favouriteCommitteeKey") != nil {
+            favouriteObjects = UserDefaults.standard.array(forKey: "favouriteCommitteeKey") as! [String]
+            
+            if favouriteObjects.contains(committee_idString) {
+                starIcon.image = UIImage(named: "Star Filled-50.png")
+            }
+        }
         
         segueMessage.text = localMessage
     }

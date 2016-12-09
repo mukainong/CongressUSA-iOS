@@ -51,6 +51,12 @@
 		D166ADFA1DE80F4500878C7A /* JointCommitteeScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = D166ADF91DE80F4500878C7A /* JointCommitteeScene.swift */; };
 		D166ADFC1DE80F7900878C7A /* CommitteeDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = D166ADFB1DE80F7900878C7A /* CommitteeDetails.swift */; };
 		D166ADFE1DE80FAB00878C7A /* CommitteeTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D166ADFD1DE80FAB00878C7A /* CommitteeTabBarController.swift */; };
+		D191D3A91DEB9A3D00CB7B1F /* FavouriteLegislators.swift in Sources */ = {isa = PBXBuildFile; fileRef = D191D3A81DEB9A3D00CB7B1F /* FavouriteLegislators.swift */; };
+		D191D3AB1DEB9A5D00CB7B1F /* FavouriteBills.swift in Sources */ = {isa = PBXBuildFile; fileRef = D191D3AA1DEB9A5D00CB7B1F /* FavouriteBills.swift */; };
+		D191D3AD1DEB9A7D00CB7B1F /* FavouriteCommittees.swift in Sources */ = {isa = PBXBuildFile; fileRef = D191D3AC1DEB9A7D00CB7B1F /* FavouriteCommittees.swift */; };
+		D191D3B51DEBA18300CB7B1F /* FavouriteTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D191D3B41DEBA18300CB7B1F /* FavouriteTabBarController.swift */; };
+		D191D3B71DECBF2300CB7B1F /* AboutMeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D191D3B61DECBF2300CB7B1F /* AboutMeViewController.swift */; };
+		D191D3B91DEE00FB00CB7B1F /* CustomCell3.swift in Sources */ = {isa = PBXBuildFile; fileRef = D191D3B81DEE00FB00CB7B1F /* CustomCell3.swift */; };
 		D1FE1CC71DE56C9200C4BCE4 /* StateScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1FE1CC61DE56C9200C4BCE4 /* StateScene.swift */; };
 		D1FE1CC91DE56E3300C4BCE4 /* HouseScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1FE1CC81DE56E3300C4BCE4 /* HouseScene.swift */; };
 		D1FE1CCB1DE56E5100C4BCE4 /* SenateScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1FE1CCA1DE56E5100C4BCE4 /* SenateScene.swift */; };
@@ -122,6 +128,12 @@
 		D166ADF91DE80F4500878C7A /* JointCommitteeScene.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JointCommitteeScene.swift; sourceTree = "<group>"; };
 		D166ADFB1DE80F7900878C7A /* CommitteeDetails.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CommitteeDetails.swift; sourceTree = "<group>"; };
 		D166ADFD1DE80FAB00878C7A /* CommitteeTabBarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CommitteeTabBarController.swift; sourceTree = "<group>"; };
+		D191D3A81DEB9A3D00CB7B1F /* FavouriteLegislators.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FavouriteLegislators.swift; sourceTree = "<group>"; };
+		D191D3AA1DEB9A5D00CB7B1F /* FavouriteBills.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FavouriteBills.swift; sourceTree = "<group>"; };
+		D191D3AC1DEB9A7D00CB7B1F /* FavouriteCommittees.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FavouriteCommittees.swift; sourceTree = "<group>"; };
+		D191D3B41DEBA18300CB7B1F /* FavouriteTabBarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FavouriteTabBarController.swift; sourceTree = "<group>"; };
+		D191D3B61DECBF2300CB7B1F /* AboutMeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AboutMeViewController.swift; sourceTree = "<group>"; };
+		D191D3B81DEE00FB00CB7B1F /* CustomCell3.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomCell3.swift; sourceTree = "<group>"; };
 		D1FE1CC61DE56C9200C4BCE4 /* StateScene.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StateScene.swift; sourceTree = "<group>"; };
 		D1FE1CC81DE56E3300C4BCE4 /* HouseScene.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HouseScene.swift; sourceTree = "<group>"; };
 		D1FE1CCA1DE56E5100C4BCE4 /* SenateScene.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SenateScene.swift; sourceTree = "<group>"; };
@@ -314,6 +326,12 @@
 				D166ADF91DE80F4500878C7A /* JointCommitteeScene.swift */,
 				D166ADFB1DE80F7900878C7A /* CommitteeDetails.swift */,
 				D166ADFD1DE80FAB00878C7A /* CommitteeTabBarController.swift */,
+				D191D3A81DEB9A3D00CB7B1F /* FavouriteLegislators.swift */,
+				D191D3AA1DEB9A5D00CB7B1F /* FavouriteBills.swift */,
+				D191D3AC1DEB9A7D00CB7B1F /* FavouriteCommittees.swift */,
+				D191D3B41DEBA18300CB7B1F /* FavouriteTabBarController.swift */,
+				D191D3B61DECBF2300CB7B1F /* AboutMeViewController.swift */,
+				D191D3B81DEE00FB00CB7B1F /* CustomCell3.swift */,
 			);
 			name = ViewController;
 			sourceTree = "<group>";
@@ -577,6 +595,7 @@
 				C5C1CE611A70F3B600B6E411 /* UITableViewExtension.swift in Sources */,
 				C539E64A1A315E87003B7CC7 /* SlideMenuControllerSwift.xcdatamodeld in Sources */,
 				D166ADF61DE80ED500878C7A /* HouseCommitteeScene.swift in Sources */,
+				D191D3B71DECBF2300CB7B1F /* AboutMeViewController.swift in Sources */,
 				D166ADF21DE80BA600878C7A /* BillDetails.swift in Sources */,
 				C5BF6A8C1BF340020064C18E /* ExSlideMenuController.swift in Sources */,
 				C5C1CE5D1A70F27500B6E411 /* BaseTableViewCell.swift in Sources */,
@@ -586,6 +605,7 @@
 				D166ADEE1DE80B3400878C7A /* ActiveScene.swift in Sources */,
 				D1FE1CCD1DE56E8000C4BCE4 /* CustomCell1.swift in Sources */,
 				D1FE1CD11DE56EE000C4BCE4 /* LegislatorDetails.swift in Sources */,
+				D191D3A91DEB9A3D00CB7B1F /* FavouriteLegislators.swift in Sources */,
 				D1FE1CD31DE69D4F00C4BCE4 /* LegTabBarController.swift in Sources */,
 				D166ADFC1DE80F7900878C7A /* CommitteeDetails.swift in Sources */,
 				C539E6471A315E87003B7CC7 /* AppDelegate.swift in Sources */,
@@ -600,9 +620,13 @@
 				C5BF6A861BEF4C080064C18E /* SubContentsViewController.swift in Sources */,
 				C5BD39DC1A6CD15700D0AF95 /* JavaViewController.swift in Sources */,
 				D1FE1CC91DE56E3300C4BCE4 /* HouseScene.swift in Sources */,
+				D191D3AB1DEB9A5D00CB7B1F /* FavouriteBills.swift in Sources */,
+				D191D3AD1DEB9A7D00CB7B1F /* FavouriteCommittees.swift in Sources */,
 				C5BA8AA61A43E2EF00863FB9 /* SlideMenuController.swift in Sources */,
 				C539E66E1A316F5F003B7CC7 /* RightViewController.swift in Sources */,
+				D191D3B91DEE00FB00CB7B1F /* CustomCell3.swift in Sources */,
 				C5C1CE5F1A70F2FD00B6E411 /* String.swift in Sources */,
+				D191D3B51DEBA18300CB7B1F /* FavouriteTabBarController.swift in Sources */,
 				C5F179D01BEB2CB500EEDD9A /* UIView.swift in Sources */,
 				D166ADF81DE80F1B00878C7A /* SenateCommitteeScene.swift in Sources */,
 				C5BD39DA1A6CD12300D0AF95 /* SwiftViewController.swift in Sources */,

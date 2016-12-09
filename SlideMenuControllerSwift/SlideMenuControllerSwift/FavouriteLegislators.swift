@@ -1,9 +1,9 @@
 //
-//  SenateScene.swift
-//  CongressUSA
+//  FavouriteLegislators.swift
+//  SlideMenuControllerSwift
 //
-//  Created by Mukai Nong on 11/16/16.
-//  Copyright © 2016 Mukai Nong. All rights reserved.
+//  Created by Mukai Nong on 11/27/16.
+//  Copyright © 2016 Yuji Hato. All rights reserved.
 //
 
 import UIKit
@@ -11,12 +11,11 @@ import SwiftyJSON
 import Alamofire
 import SwiftSpinner
 
-//class StateScene: UIViewController, UITableViewDataSource {
-class SenateScene: UIViewController, UITableViewDataSource, UITableViewDelegate, UISearchBarDelegate {
+class FavouriteLegislators: UIViewController, UITableViewDataSource, UITableViewDelegate, UISearchBarDelegate{
+    
+    @IBOutlet weak var tblJSON: UITableView!
     
     @IBOutlet weak var searchButton: UIBarButtonItem!
-    
-    @IBOutlet var tblJSON: UITableView!
     
     @IBAction func searchFunction(_ sender: Any) {
         showHideSearch()
@@ -29,6 +28,10 @@ class SenateScene: UIViewController, UITableViewDataSource, UITableViewDelegate,
     var arrRes = [[String:AnyObject]]() //Array of dictionary
     
     var filteredRes = [[String:AnyObject]]()
+    
+    var favouriteObjects = [String]()
+    
+    var allData = [[String:AnyObject]]()
     
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
         if searchText != "" {
@@ -50,7 +53,10 @@ class SenateScene: UIViewController, UITableViewDataSource, UITableViewDelegate,
         
         createSearchBar()
         
-        print("hello world3")
+        if UserDefaults.standard.array(forKey: "favouriteLegKey") != nil {
+            favouriteObjects = UserDefaults.standard.array(forKey: "favouriteLegKey") as! [String]
+        }
+        
         // Do any additional setup after loading the view, typically from a nib.
         
         Alamofire.request("http://newapp2016-env.us-west-2.elasticbeanstalk.com/congress_responsive.php?database=legislators").responseJSON { (responseJSON) -> Void in
@@ -58,31 +64,84 @@ class SenateScene: UIViewController, UITableViewDataSource, UITableViewDelegate,
                 let swiftyJsonVar = JSON(responseJSON.result.value!)
                 
                 if let resData = swiftyJsonVar["results"].arrayObject {
-                    let r = resData as! [[String:AnyObject]]
-                    self.arrRes = r.filter{$0["chamber"] as? String! == "senate"}
-                    self.arrRes = self.arrRes.sorted {($0["last_name"] as? String)! < ($1["last_name"] as? String)!}
+                    self.allData = resData as! [[String:AnyObject]]
                 }
+                
+                self.arrRes.removeAll()
+                
+                for name in self.favouriteObjects {
+                    let object = self.allData.filter{($0["bioguide_id"] as? String!)! == name}[0]
+                    self.arrRes.append(object)
+                }
+                
                 if self.arrRes.count > 0 {
                     self.tblJSON.reloadData()
                 }
+                
+                SwiftSpinner.hide()
+            }
+        }
+        
+//        for name in self.favouriteObjects {
+//            let object = allData.filter{($0["bioguide_id"] as? String!)! == name}[0]
+//            arrRes.append(object)
+//        }
+//
+//        if self.arrRes.count > 0 {
+//            self.tblJSON.reloadData()
+//        }
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        self.tabBarController?.navigationItem.rightBarButtonItem = searchButton
+        
+        SwiftSpinner.show("Fetching data...")
+        
+//        self.arrRes.removeAll()
+//        
+//        for name in self.favouriteObjects {
+//            let object = self.allData.filter{($0["bioguide_id"] as? String!)! == name}[0]
+//            self.arrRes.append(object)
+//        }
+//        
+//        self.tblJSON.reloadData()
+        
+        if UserDefaults.standard.array(forKey: "favouriteLegKey") != nil {
+            favouriteObjects = UserDefaults.standard.array(forKey: "favouriteLegKey") as! [String]
+        }
+        
+        Alamofire.request("http://newapp2016-env.us-west-2.elasticbeanstalk.com/congress_responsive.php?database=legislators").responseJSON { (responseJSON) -> Void in
+            if((responseJSON.result.value) != nil) {
+                let swiftyJsonVar = JSON(responseJSON.result.value!)
+                
+                if let resData = swiftyJsonVar["results"].arrayObject {
+                    self.allData = resData as! [[String:AnyObject]]
+                }
+                
+                self.arrRes.removeAll()
+                
+                for name in self.favouriteObjects {
+                    let object = self.allData.filter{($0["bioguide_id"] as? String!)! == name}[0]
+                    self.arrRes.append(object)
+                }
+                
+                self.tblJSON.reloadData()
+                
                 SwiftSpinner.hide()
             }
         }
     }
     
-    override func viewWillAppear(_ animated: Bool) {
-        self.tabBarController?.navigationItem.rightBarButtonItem = searchButton
-    }
-    
     func createSearchBar() {
-            searchBar.placeholder = "enter you inputs"
-            searchBar.delegate = self
+        searchBar.placeholder = "enter you inputs"
+        searchBar.delegate = self
     }
     
     func showHideSearch() {
         if self.tabBarController?.navigationItem.rightBarButtonItem?.image == UIImage(named: "Search-50")! {
             self.tabBarController?.navigationItem.titleView = searchBar
             searchButton.image = UIImage(named: "Cancel-50")!
+            
         } else {
             self.tabBarController?.navigationItem.titleView = nil
             searchButton.image = UIImage(named: "Search-50")!
@@ -91,7 +150,7 @@ class SenateScene: UIViewController, UITableViewDataSource, UITableViewDelegate,
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = self.tblJSON.dequeueReusableCell(withIdentifier: "jsonCell", for: indexPath) as! CustomCell1
-        //        let cell = self.tblJSON.dequeueReusableCell(withIdentifier: "jsonCell", for: indexPath)
+
         var dict = arrRes[indexPath.row]
         
         if flag && searchBar.text != ""{
@@ -115,13 +174,10 @@ class SenateScene: UIViewController, UITableViewDataSource, UITableViewDelegate,
         cell.title?.text = var1! + " " + var2!
         cell.subtitle?.text = dict["state_name"] as? String
         
-        //        cell.textLabel?.text = var1! + " " + var2!
-        //        cell.detailTextLabel?.text = dict["state_name"] as? String
         return cell
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-//        return arrRes.count
         if flag && searchBar.text != ""{
             return filteredRes.count
         }
@@ -139,7 +195,6 @@ class SenateScene: UIViewController, UITableViewDataSource, UITableViewDelegate,
             } else {
                 leg = arrRes[(path?.row)!] as [String:AnyObject]
             }
-            //            viewController.localMessage = leg["first_name"] as! String
             
             if leg["first_name"] is NSNull {
                 viewController.localArray[0] = "N.A."
@@ -239,13 +294,5 @@ class SenateScene: UIViewController, UITableViewDataSource, UITableViewDelegate,
                 viewController.bioguide_idString = leg["bioguide_id"] as! String
             }
         }
-    }
-    
-    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        //let indexPath = tableView.indexPathForSelectedRow!
-        //let currentCell = tableView.cellForRow(at: indexPath)! as UITableViewCell
-        
-        //valueToPass = currentCell.textLabel?.text
-        //performSegue(withIdentifier: "SendDataSegue", sender: self)
     }
 }

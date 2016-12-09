@@ -29,6 +29,7 @@ class LeftViewController : UIViewController, LeftMenuProtocol {
     var goViewController: UIViewController!
     var nonMenuViewController: UIViewController!
     var imageHeaderView: ImageHeaderView!
+    var myPicture: UIImageView!
     
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
@@ -53,11 +54,18 @@ class LeftViewController : UIViewController, LeftMenuProtocol {
         let javaViewController = storyboard.instantiateViewController(withIdentifier: "CommitteeTabBar") as! CommitteeTabBarController
         self.javaViewController = UINavigationController(rootViewController: javaViewController)
         
-        let goViewController = storyboard.instantiateViewController(withIdentifier: "GoViewController") as! GoViewController
+//        let goViewController = storyboard.instantiateViewController(withIdentifier: "GoViewController") as! GoViewController
+//        self.goViewController = UINavigationController(rootViewController: goViewController)
+        
+        let goViewController = storyboard.instantiateViewController(withIdentifier: "FavouriteTabBar") as! FavouriteTabBarController
         self.goViewController = UINavigationController(rootViewController: goViewController)
         
-        let nonMenuController = storyboard.instantiateViewController(withIdentifier: "NonMenuController") as! NonMenuController
-        nonMenuController.delegate = self
+//        let nonMenuController = storyboard.instantiateViewController(withIdentifier: "NonMenuController") as! NonMenuController
+//        nonMenuController.delegate = self
+//        self.nonMenuViewController = UINavigationController(rootViewController: nonMenuController)
+        
+        let nonMenuController = storyboard.instantiateViewController(withIdentifier: "AboutMeController") as! AboutMeViewController
+//        nonMenuController.delegate = self
         self.nonMenuViewController = UINavigationController(rootViewController: nonMenuController)
         
         self.tableView.registerCellClass(BaseTableViewCell.self)

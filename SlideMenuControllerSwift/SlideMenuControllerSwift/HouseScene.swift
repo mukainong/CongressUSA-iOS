@@ -9,6 +9,7 @@
 import UIKit
 import SwiftyJSON
 import Alamofire
+import SwiftSpinner
 
 //class StateScene: UIViewController, UITableViewDataSource {
 class HouseScene: UIViewController, UITableViewDataSource, UITableViewDelegate, UISearchBarDelegate{
@@ -56,6 +57,8 @@ class HouseScene: UIViewController, UITableViewDataSource, UITableViewDelegate, 
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        SwiftSpinner.show("Fetching data...")
+        
         createSearchBar()
         
         print("hello world1")
@@ -73,6 +76,7 @@ class HouseScene: UIViewController, UITableViewDataSource, UITableViewDelegate, 
                 if self.arrRes.count > 0 {
                     self.tblJSON.reloadData()
                 }
+                SwiftSpinner.hide()
             }
         }
         
@@ -152,12 +156,12 @@ class HouseScene: UIViewController, UITableViewDataSource, UITableViewDelegate, 
         if segue.identifier == "SendDataSegue" {
             let viewController = segue.destination as! LegislatorDetails
             let path = tblJSON.indexPathForSelectedRow
-            let leg : (AnyObject)
+            let leg : [String:AnyObject]
             
             if flag && searchBar.text != ""{
-                leg = filteredRes[(path?.row)!] as (AnyObject)
+                leg = filteredRes[(path?.row)!] as [String:AnyObject]
             } else {
-                leg = arrRes[(path?.row)!] as (AnyObject)
+                leg = arrRes[(path?.row)!] as [String:AnyObject]
             }
             //            viewController.localMessage = leg["first_name"] as! String
             
@@ -182,13 +186,25 @@ class HouseScene: UIViewController, UITableViewDataSource, UITableViewDelegate, 
             if leg["birthday"] is NSNull {
                 viewController.localArray[3] = "N.A."
             } else {
-                viewController.localArray[3] = leg["first_name"] as! String
+                let dateFormatterGet = DateFormatter()
+                dateFormatterGet.dateFormat = "yyyy-MM-dd"
+                
+                let dateFormatterPrint = DateFormatter()
+                dateFormatterPrint.dateFormat = "MMM dd,yyyy"
+                
+                let date: NSDate? = dateFormatterGet.date(from: (leg["birthday"]?.substring(with: NSRange(location: 0, length: 10)))!) as NSDate?
+                
+                viewController.localArray[3] = dateFormatterPrint.string(from: date! as Date)
             }
             
             if leg["gender"] is NSNull {
                 viewController.localArray[4] = "N.A."
             } else {
-                viewController.localArray[4] = leg["gender"] as! String
+                if leg["gender"] as! String == "M" {
+                    viewController.localArray[4] = "Male"
+                } else {
+                    viewController.localArray[4] = "Female"
+                }
             }
             
             if leg["chamber"] is NSNull {
@@ -200,7 +216,7 @@ class HouseScene: UIViewController, UITableViewDataSource, UITableViewDelegate, 
             if leg["fax"] is NSNull {
                 viewController.localArray[6] = "N.A."
             } else {
-                viewController.localArray[6] = leg["first_name"] as! String
+                viewController.localArray[6] = leg["fax"] as! String
             }
             
             if leg["twitter_id"] is NSNull {
@@ -209,22 +225,36 @@ class HouseScene: UIViewController, UITableViewDataSource, UITableViewDelegate, 
                 viewController.localArray[7] = leg["twitter_id"] as! String
             }
             
-            if leg["website"] is NSNull {
+            if leg["facebook_id"] is NSNull {
                 viewController.localArray[8] = "N.A."
             } else {
-                viewController.localArray[8] = leg["website"] as! String
+                viewController.localArray[8] = leg["facebook_id"] as! String
+            }
+            
+            if leg["website"] is NSNull {
+                viewController.localArray[9] = "N.A."
+            } else {
+                viewController.localArray[9] = leg["website"] as! String
             }
             
             if leg["office"] is NSNull {
-                viewController.localArray[9] = "N.A."
+                viewController.localArray[10] = "N.A."
             } else {
-                viewController.localArray[9] = leg["office"] as! String
+                viewController.localArray[10] = leg["office"] as! String
             }
             
             if leg["term_end"] is NSNull {
-                viewController.localArray[10] = "N.A."
+                viewController.localArray[11] = "N.A."
             } else {
-                viewController.localArray[10] = leg["term_end"] as! String
+                let dateFormatterGet = DateFormatter()
+                dateFormatterGet.dateFormat = "yyyy-MM-dd"
+                
+                let dateFormatterPrint = DateFormatter()
+                dateFormatterPrint.dateFormat = "MMM dd,yyyy"
+                
+                let date: NSDate? = dateFormatterGet.date(from: (leg["term_end"]?.substring(with: NSRange(location: 0, length: 10)))!) as NSDate?
+                
+                viewController.localArray[11] = dateFormatterPrint.string(from: date! as Date)
             }
             
             if leg["bioguide_id"] is NSNull {

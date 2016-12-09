@@ -8,22 +8,11 @@
 
 import UIKit
 
-class CustomCell2: UITableViewCell {
+class CustomCell3: UITableViewCell {
     
     @IBOutlet weak var leftCell: UILabel!
-    @IBOutlet weak var rightCell: UILabel!
-    @IBOutlet weak var rightCellButton: UIButton!
-    
-    var web : URL? = nil
-    
-    @IBAction func rightCellButtonFunction(_ sender: Any) {
-        UIApplication.shared.openURL(web!)
-    }
-    
-    @IBAction func rightCellButtonFunction2(_ sender: Any) {
-        UIApplication.shared.openURL(web!)
-    }
-    
+    @IBOutlet weak var rightCell: UIButton!
+
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code

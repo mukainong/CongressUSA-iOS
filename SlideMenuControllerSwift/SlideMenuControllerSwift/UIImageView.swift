@@ -17,6 +17,7 @@ extension UIImageView {
             return
         }
         self.alpha = 0
+//        let url = URL(string: "http://www-scf.usc.edu/~mnong/images/mukainong.jpg/")!
         let url = URL(string: "http://lorempixel.com/\(width)/\(height)/")!
         let configuration = URLSessionConfiguration.default
         configuration.timeoutIntervalForRequest = 15
